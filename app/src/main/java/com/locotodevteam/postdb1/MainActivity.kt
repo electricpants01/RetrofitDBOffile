@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         room = Room.databaseBuilder(this, AppDatabase::class.java, "firstPostDB").build()
         // init recyclerview
+
         initRecycler()
         initButtonListeners()
         initSubscription()
