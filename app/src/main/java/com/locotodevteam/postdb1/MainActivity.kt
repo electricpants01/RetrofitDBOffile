@@ -25,7 +25,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        room = Room.databaseBuilder(this, AppDatabase::class.java, "firstPostDB").build()
+//        room = Room.databaseBuilder(this, AppDatabase::class.java, "firstPostDB").build()
+        room = AppDatabase.getRoomInstance(this)
         // init recyclerview
 
         initRecycler()
